@@ -30,8 +30,6 @@ export function App() {
     });
   };
 
-  console.log('rerender');
-
   const handleChangeCode = useCallback((value: string) => {
     code.current = value;
   }, []);
@@ -51,6 +49,10 @@ export function App() {
   return (
     <>
       <div className={styles.App}>
+        <div className={classNames(styles.block, styles.task)}>
+          ЗАДАНИЕ: Дан некоторый массив, например, вот такой: [1, 2, 3, 4, 5, 6]. Поделите сумму элементов, стоящих на
+          четных позициях, на сумму элементов, стоящих на нечетных позициях.{' '}
+        </div>
         <div className={classNames(styles.block, styles.editorOptions)}>
           <Button onClick={handleToggleTheme} disabled={codeRunnerRequest.isLoading}>
             Theme: {theme}
