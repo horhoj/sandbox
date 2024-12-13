@@ -28,6 +28,7 @@ export const makeRequestExtraReducer = <IS extends Record<string, RequestStatePr
     .addCase(asyncThunk.pending, (state) => {
       state[requestPropertyName].isLoading = true;
       state[requestPropertyName].error = null;
+      state[requestPropertyName].data = null;
     })
     .addCase(asyncThunk.fulfilled, (state, action) => {
       state[requestPropertyName].isLoading = false;

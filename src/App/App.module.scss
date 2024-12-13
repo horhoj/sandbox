@@ -5,6 +5,33 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  width: 100%;
+}
+
+.block {
+  padding: 15px;
+}
+
+.editorOptions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.codeRunError {
+  background-color: red;
+}
+
+.codeRunSuccess {
+  background-color: green;
+}
+
+.codeIsRunning {
+  background-color: orange;
+}
+
+.codeRunResultBlock {
+  color: white;
+  font-weight: 500;
+  margin: 15px;
   padding: 15px;
 }

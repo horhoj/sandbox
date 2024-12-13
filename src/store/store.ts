@@ -2,10 +2,12 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import * as rp from 'redux-persist';
+import { codeRunnerReducer } from './codeRunner';
 import { settingsReducer } from './settingsSlice';
 
 const reducers = combineReducers({
   settings: settingsReducer,
+  codeRunner: codeRunnerReducer,
 });
 
 const persistedReducer = persistReducer(
